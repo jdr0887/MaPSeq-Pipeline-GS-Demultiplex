@@ -1,0 +1,4 @@
+edu.unc.mapseq.commands.gs.demultiplex.RunWorkflowAction
+edu.unc.mapseq.commands.gs.demultiplex.RegisterToIRODSAction
+edu.unc.mapseq.commands.gs.demultiplex.SaveDemultiplexedStatsAttributesAction
+edu.unc.mapseq.commands.gs.demultiplex.SaveObservedClusterDensityAttributeAction

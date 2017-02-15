@@ -1,0 +1,19 @@
+<features name="mapseq-pipeline-gs-demultiplex-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.2.0">
+
+  <feature name="mapseq-pipeline-gs-demultiplex" version="${project.version}" resolver="(obr)">
+    <bundle>mvn:org.jsoup/com.springsource.org.jsoup/1.5.2</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-commons/${project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-workflow/${project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-commands/${project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-ws-api/${project.version}</bundle>
+    <bundle>mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-ws-impl/${project.version}</bundle>
+    <bundle start-level="100">mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-executor/${project.version}</bundle>
+    <bundle start-level="100">mvn:edu.unc.mapseq.pipelines.gs-demultiplex/gs-demultiplex-messaging/${project.version}</bundle>
+  </feature>
+
+</features>
+
+
+
+
+

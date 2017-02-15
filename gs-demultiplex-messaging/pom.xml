@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <parent>
+    <groupId>edu.unc.mapseq.pipelines</groupId>
+    <artifactId>gs-demultiplex</artifactId>
+    <version>0.6.71-SNAPSHOT</version>
+  </parent>
+  <name>MaPSeq :: Pipelines :: GS :: Demultiplex :: Messaging</name>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.unc.mapseq.pipelines.gs-demultiplex</groupId>
+  <artifactId>gs-demultiplex-messaging</artifactId>
+  <version>0.6.71-SNAPSHOT</version>
+  <packaging>bundle</packaging>
+  <properties>
+    <maven.site.plugin.skip>true</maven.site.plugin.skip>    
+  </properties>              
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>edu.unc.mapseq.pipelines.gs-demultiplex</groupId>
+      <artifactId>gs-demultiplex-workflow</artifactId>
+    </dependency>       
+    <dependency>
+      <groupId>org.apache.servicemix.bundles</groupId>
+      <artifactId>org.apache.servicemix.bundles.xstream</artifactId>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jms_1.1_spec</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.felix</groupId>
+      <artifactId>org.osgi.core</artifactId>
+    </dependency>    
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-client</artifactId>
+    </dependency>    
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Export-Package>edu.unc.mapseq.messaging.gs.demultiplex.*</Export-Package>
+	    <Import-Package>*</Import-Package>
+            <Private-Package />
+          </instructions>
+        </configuration>
+      </plugin>      
+    </plugins>
+  </build>
+</project>
