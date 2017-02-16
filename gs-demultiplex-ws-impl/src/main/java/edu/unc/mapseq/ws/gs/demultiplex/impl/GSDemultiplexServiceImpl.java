@@ -17,9 +17,9 @@ import edu.unc.mapseq.dao.FileDataDAO;
 import edu.unc.mapseq.dao.MaPSeqDAOException;
 import edu.unc.mapseq.dao.model.FileData;
 import edu.unc.mapseq.dao.model.MimeType;
-import edu.unc.mapseq.ws.gs.demultiplex.GSCASAVAService;
+import edu.unc.mapseq.ws.gs.demultiplex.GSDemultiplexService;
 
-public class GSDemultiplexServiceImpl implements GSCASAVAService {
+public class GSDemultiplexServiceImpl implements GSDemultiplexService {
 
     private static final Logger logger = LoggerFactory.getLogger(GSDemultiplexServiceImpl.class);
 
