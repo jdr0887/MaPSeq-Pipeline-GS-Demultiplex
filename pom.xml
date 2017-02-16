@@ -9,7 +9,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.unc.mapseq.pipelines</groupId>
   <artifactId>gs-demultiplex</artifactId>
-  <version>0.6.72</version>
+  <version>0.6.73-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
     <maven.site.plugin.skip>false</maven.site.plugin.skip>    
@@ -34,24 +34,24 @@
     <url>https://github.com/jdr0887/MaPSeq-Pipeline-GS-Demultiplex</url>
     <developerConnection>scm:git:git@github.com:jdr0887/MaPSeq-Pipeline-GS-Demultiplex.git</developerConnection>
     <connection>scm:git:git@github.com:jdr0887/MaPSeq-Pipeline-GS-Demultiplex.git</connection>
-    <tag>gs-demultiplex-0.6.72</tag>
+    <tag>HEAD</tag>
   </scm>
   <dependencyManagement>
     <dependencies>
       <dependency>
       	<groupId>edu.unc.mapseq.pipelines.gs-demultiplex</groupId>
       	<artifactId>gs-demultiplex-commons</artifactId>
-      	<version>0.6.72</version>
+      	<version>0.6.73-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>edu.unc.mapseq.pipelines.gs-demultiplex</groupId>
       	<artifactId>gs-demultiplex-ws-api</artifactId>
-      	<version>0.6.72</version>
+      	<version>0.6.73-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>edu.unc.mapseq.pipelines.gs-demultiplex</groupId>
       	<artifactId>gs-demultiplex-workflow</artifactId>
-      	<version>0.6.72</version>
+      	<version>0.6.73-SNAPSHOT</version>
       </dependency>
       <dependency>
       	<groupId>org.jsoup</groupId>
