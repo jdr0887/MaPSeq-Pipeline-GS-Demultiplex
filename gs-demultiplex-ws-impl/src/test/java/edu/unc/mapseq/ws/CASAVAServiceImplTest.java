@@ -15,7 +15,7 @@ import org.apache.cxf.frontend.ClientProxy;
 import org.apache.cxf.transport.http.HTTPConduit;
 import org.junit.Test;
 
-import edu.unc.mapseq.ws.gs.demultiplex.GSCASAVAService;
+import edu.unc.mapseq.ws.gs.demultiplex.GSDemultiplexService;
 
 public class CASAVAServiceImplTest {
 
@@ -26,13 +26,13 @@ public class CASAVAServiceImplTest {
         Service service = Service.create(serviceQName);
         QName portQName = new QName("http://casava.gs.ws.mapseq.unc.edu", "GSCASAVAPort");
         service.addPort(portQName, SOAPBinding.SOAP11HTTP_BINDING, String.format("http://%s:%d/cxf/GSCASAVAService", "152.54.3.109", 8181));
-        GSCASAVAService casavaService = service.getPort(GSCASAVAService.class);
+        GSDemultiplexService casavaService = service.getPort(GSDemultiplexService.class);
 
         Client cl = ClientProxy.getClient(casavaService);
         HTTPConduit httpConduit = (HTTPConduit) cl.getConduit();
         httpConduit.getClient().setReceiveTimeout(5 * 60 * 1000L);
 
-        Binding binding = ((BindingProvider) service.getPort(portQName, GSCASAVAService.class)).getBinding();
+        Binding binding = ((BindingProvider) service.getPort(portQName, GSDemultiplexService.class)).getBinding();
         ((SOAPBinding) binding).setMTOMEnabled(true);
 
         try {
@@ -55,7 +55,7 @@ public class CASAVAServiceImplTest {
         Service service = Service.create(serviceQName);
         service.addPort(portQName, SOAPBinding.SOAP11HTTP_MTOM_BINDING,
                 String.format("http://%s:%d/cxf/SequencerRunService", "biodev2.its.unc.edu", 8181));
-        GSCASAVAService casavaService = service.getPort(GSCASAVAService.class);
+        GSDemultiplexService casavaService = service.getPort(GSDemultiplexService.class);
         System.out.println(casavaService.assertDirectoryExists("121212_UNC13-SN749_0207_BD1LCDACXX"));
         System.out.println(casavaService.assertDirectoryExists("130116_UNC16-SN851_0202_AD1TP9ACXX"));
         System.out.println(casavaService.assertDirectoryExists("130117_UNC14-SN744_0297_BD1RDUACXX"));
